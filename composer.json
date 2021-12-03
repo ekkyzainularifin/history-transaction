@@ -1,0 +1,20 @@
+{
+    "name": "eza/history-transaction",
+    "description": "save log all database transaction old value and last value",
+    "authors": [
+        {
+            "name": "Ekky Zainul Arifin",
+            "email": "ekkyzainularifin@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Eza\\HistoryTransaction\\": "src/"
+        },
+        "files": [
+            "src/Historytransaction.php"
+        ]
+    },
+}
