@@ -13,7 +13,7 @@ class CreateHistoryDataTransaction extends Migration
      */
     public function up()
     {
-        Schema::create('history_data_transaction', function (Blueprint $table) {
+        Schema::create('log_transaction', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->morphs('transactionable');
             $table->text('field')->nullable();
@@ -33,6 +33,6 @@ class CreateHistoryDataTransaction extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('history_data_transaction');
+        Schema::dropIfExists('log_transaction');
     }
 }

@@ -37,7 +37,11 @@ class HistoryTransactionServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadMigrationsFrom(__DIR__.'/migrations');
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                HistoryTransactionCommand::class,
+            ]);
+        }
     }
 
 }

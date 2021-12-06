@@ -1,6 +1,8 @@
 {
     "name": "eza/history-transaction",
-    "description": "save log all database transaction old value and last value",
+    "description": "Log everythink database transaction.",
+    "type": "project",
+    "license": "MIT",
     "authors": [
         {
             "name": "Ekky Zainul Arifin",
@@ -8,13 +10,18 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
     "autoload": {
         "psr-4": {
             "Eza\\HistoryTransaction\\": "src/"
-        },
-        "files": [
-            "src/Historytransaction.php"
-        ]
+        }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Eza\\HistoryTransaction\\HistoryTransactionServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "require": {}
 }
