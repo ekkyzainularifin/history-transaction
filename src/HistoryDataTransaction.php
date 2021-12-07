@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace Eza\HistoryTransaction;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -13,7 +13,7 @@ class HistoryDataTransaction extends Model
      *
      * @var string
      */
-    protected $table = 'history_data_transaction';
+    protected $table = 'log_transaction';
     /**
      * The attributes that aren't mass assignable.
      *
