@@ -28,21 +28,11 @@ class HistoryTransactionCommand extends Command
      */
     public function handle()
     {
-        $this->fire();
-    }
 
-    /**
-     * Execute the console command.
-     *
-     * @return void
-     */
-    public function fire()
-    {
         $this->publishMigrations();
-
+        $this->call('migrate');
         $this->info("History Transaction alredy installed");
     }
-
 
     /**
      * Publish the directory to the given directory.
@@ -57,7 +47,6 @@ class HistoryTransactionCommand extends Command
         $source = array_diff(scandir($from) , $exclude);
 
         foreach ($source as $item) {
-            $this->info("Copying file: " . $to . $item);
             File::copy($from . $item , $to . $item);
         }
     }
