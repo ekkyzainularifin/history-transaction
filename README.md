@@ -12,9 +12,23 @@
 
 ## Installation
 
-Run the following command to install the package and add it as a requirement to your project's
+Run the following command to add it as a requirement to your project's
 `composer.json`:
 
 ```bash
 composer require eza/history-transaction
+```
+You can install the package by running the command:
+```bash
+php artisan history-transaction:install
+```
+After running instalation command you will see `log_transaction` table
+
+
+## Usage
+
+It's simple, just import the History Transaction facade in your model.
+
+```bash
+use HistoryTransaction;
 ```
